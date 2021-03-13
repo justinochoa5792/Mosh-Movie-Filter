@@ -3,6 +3,8 @@ import Products from "./components/products";
 import ProductDetails from "./components/productDetails";
 import Post from "./components/posts.jsx";
 import Dashboard from "./components/admin/dashboard";
+import Users from "./components/admin/users";
+import Posts from "./components/admin/posts.jsx";
 import NotFound from "./components/notFound";
 import Home from "./components/home";
 import { Route, Switch, Redirect } from "react-router-dom";
@@ -22,6 +24,8 @@ function App() {
           <Route exact path="/products/:id" component={ProductDetails} />
           <Route exact path="/posts/:year?/:month?" component={Post} />
           <Route exact path="/admin" component={Dashboard} />
+          <Route exact path="/admin/users" component={Users} />
+          <Route exact path="/admin/posts" component={Posts} />
           <Route exact path="/not-found" component={NotFound} />
           <Route exact path="/" component={Home} />
           <Redirect to="/not-found" />
